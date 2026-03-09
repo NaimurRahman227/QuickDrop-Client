@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+/* 2. TAILWIND */
+@import "tailwindcss";
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 ease-out
+           hover:shadow-xl
+           hover:-translate-y-1
+           hover:scale-[1.02];
+  }
+}
+
+/* 3. DAISYUI */
+@plugin "daisyui";
+
+/* 4. YOUR FONT CLASS */
+.font-urbanist {
+  font-family: "Urbanist", sans-serif;
+}
+
+/* 5. CUSTOM COMPONENT CSS (Swiper etc.) */
+
+/* SIDE FADE + CENTER ZOOM */
+.review-swiper .swiper-slide {
+  opacity: 0.3;
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+
+.review-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* DOT COLORS */
+.review-swiper .swiper-pagination-bullet {
+  background: #94a3b8 !important;
+  opacity: 1;
+}
+
+.review-swiper .swiper-pagination-bullet-active {
+  background: hsl(var(--p)) !important;
+  transform: scale(1.3);
+}
