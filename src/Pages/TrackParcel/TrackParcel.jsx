@@ -14,7 +14,7 @@ const TrackParcel = () => {
     if (!trackingId.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.get(`http://localhost:3000/api/orders/track/${trackingId}`);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/orders/track/${trackingId}`);
       setParcel(res.data);
       setError("");
     } catch (err) {

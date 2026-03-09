@@ -16,7 +16,7 @@ const RiderRegister = () => {
     const onSubmit = async (data) => {
         try {
             await axios.post(
-                "http://localhost:3000/api/users/register",
+                "${import.meta.env.VITE_API_URL}/api/users/register",
                 {
                     ...data,
                     role: "rider",   // 👈 VERY IMPORTANT

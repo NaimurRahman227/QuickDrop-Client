@@ -11,7 +11,7 @@ const UserDashboard = () => {
   const fetchParcels = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:3000/api/users/orders", {
+      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/users/orders", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setParcels(res.data);

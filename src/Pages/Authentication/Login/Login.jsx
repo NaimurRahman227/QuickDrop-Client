@@ -18,7 +18,7 @@ const Login = () => {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/users/login",
+        "${import.meta.env.VITE_API_URL}/api/users/login",
         data
       );
 
@@ -51,7 +51,7 @@ const Login = () => {
       const googleUser = result.user;
 
       const response = await axios.post(
-        "http://localhost:3000/api/users/google-login",
+        "${import.meta.env.VITE_API_URL}/api/users/google-login",
         {
           name: googleUser.displayName,
           email: googleUser.email,

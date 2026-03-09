@@ -13,7 +13,7 @@ const RiderDashboard = () => {
 
   const fetchParcels = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/rider/orders", headers);
+      const res = await axios.get("${import.meta.env.VITE_API_URL}/api/rider/orders", headers);
       setParcels(res.data.orders || res.data);
     } catch (err) {
       console.error(err);
@@ -36,14 +36,14 @@ const RiderDashboard = () => {
 
   const acceptOrder = async (id) => {
     try {
-      await axios.patch(`http://localhost:3000/api/rider/accept/${id}`, {}, headers);
+      await axios.patch(`${import.meta.env.VITE_API_URL}/api/rider/accept/${id}`, {}, headers);
       fetchParcels();
     } catch (err) { console.error(err); }
   };
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.patch(`http://localhost:3000/api/rider/update-status/${id}`, { status }, headers);
+      await axios.patch(`${import.meta.env.VITE_API_URL}/api/rider/update-status/${id}`, { status }, headers);
       fetchParcels();
     } catch (err) { console.error(err); }
   };
