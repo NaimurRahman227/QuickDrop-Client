@@ -145,7 +145,7 @@ const SendParcel = () => {
           const token = localStorage.getItem("token");
 
           const response = await axios.post(
-            "${import.meta.env.VITE_API_URL}/api/orders",
+            `${import.meta.env.VITE_API_URL}/api/orders`,
             orderPayload,
             {
               headers: {

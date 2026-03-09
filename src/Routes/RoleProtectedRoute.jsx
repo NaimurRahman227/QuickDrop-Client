@@ -3,10 +3,10 @@ import { jwtDecode } from "jwt-decode";
 
 const RoleProtectedRoute = ({ children, role }) => {
 
-  // 🔹 CHANGED: get token instead of user
+  //  get token instead of user
   const token = localStorage.getItem("token");
 
-  // 🔹 if no token → not logged in
+  //  if no token → not logged in
   if (!token) {
     return <Navigate to="/login" />;
   }

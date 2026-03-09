@@ -35,7 +35,7 @@ const Register = () => {
             const googleUser = result.user;
 
             const response = await axios.post(
-                "${import.meta.env.VITE_API_URL}/api/users/google-login",
+                `${import.meta.env.VITE_API_URL}/api/users/google-login`,
                 {
                     name: googleUser.displayName,
                     email: googleUser.email,
