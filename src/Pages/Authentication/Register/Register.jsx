@@ -16,7 +16,7 @@ const Register = () => {
     const onSubmit = async (data) => {
         try {
             await axios.post(
-                "${import.meta.env.VITE_API_URL}/api/users/register",
+                `${import.meta.env.VITE_API_URL}/api/users/register`,
                 data
             );
 
