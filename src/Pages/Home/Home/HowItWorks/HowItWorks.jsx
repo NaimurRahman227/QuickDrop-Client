@@ -1,5 +1,8 @@
 import React from 'react'
-
+import authImg from "/src/assets/authImage.png"
+import agent from "/src/assets/agent-pending.png"
+import liveTrack from "/src/assets/live-tracking.png"
+import booking from "/src/assets/bookingIcon.png"
 const HowItWorks = () => {
   return (
     <div data-aos='fade-right' className="my-16 px-4">
@@ -16,7 +19,7 @@ const HowItWorks = () => {
         <div className="card bg-base-100 hover:bg-teal-100 shadow-md hover:shadow-xl hover:scale-[1.04] transition duration-300 ease-in-out">
           <figure className="px-6 pt-6 justify-start">
             <img
-              src="/src/assets/authImage.png"
+              src={authImg}
               alt="Step 1"
               className="rounded-xl w-24"
             />
@@ -31,7 +34,7 @@ const HowItWorks = () => {
         <div className="card bg-base-100 hover:bg-teal-100 shadow-md hover:shadow-xl hover:scale-[1.04] transition duration-300 ease-in-out ">
           <figure className="px-6 pt-6 justify-start">
             <img
-              src="/src/assets/agent-pending.png"
+              src={agent}
               alt="Step 2"
               className="rounded-xl w-24"
             />
@@ -46,7 +49,7 @@ const HowItWorks = () => {
         <div className="card bg-base-100 hover:bg-teal-100 shadow-md hover:shadow-xl hover:scale-[1.04] transition duration-300 ease-in-out">
           <figure className="px-6 pt-6 justify-start">
             <img
-              src="/src/assets/live-tracking.png"
+              src={liveTrack}
               alt="Step 3"
               className="rounded-xl w-24"
             />
@@ -61,7 +64,7 @@ const HowItWorks = () => {
         <div className="card bg-base-100 hover:bg-teal-100 shadow-md hover:shadow-xl hover:scale-[1.04] transition duration-300 ease-in-out">
           <figure className="px-6 pt-6 justify-start">
             <img
-              src="/src/assets/bookingIcon.png"
+              src={booking}
               alt="Step 4"
               className="rounded-xl w-24"
             />

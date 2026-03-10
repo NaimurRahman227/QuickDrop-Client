@@ -1,4 +1,7 @@
 import React from 'react'
+import agent from "/src/assets/agent-pending.png"
+import live from "/src/assets/live-tracking.png"
+import safe from "/src/assets/safe-delivery.png"
 
 const FeatureSection = () => {
   return (
@@ -18,7 +21,7 @@ const FeatureSection = () => {
           <figure className="flex justify-center w-full md:w-auto">
             <img
               className="w-40 rounded-xl"
-              src="/src/assets/agent-pending.png"
+              src={agent}
               alt="feature"
             />
           </figure>
@@ -44,7 +47,7 @@ const FeatureSection = () => {
           <figure className="flex justify-center w-full md:w-auto">
             <img
               className="w-40 rounded-xl"
-              src="/src/assets/live-tracking.png"
+              src={live}
               alt="feature"
             />
           </figure>
@@ -70,7 +73,7 @@ const FeatureSection = () => {
           <figure className="flex justify-center w-full md:w-auto">
             <img
               className="w-40 rounded-xl"
-              src="/src/assets/safe-delivery.png"
+              src={safe}
               alt="feature"
             />
           </figure>
